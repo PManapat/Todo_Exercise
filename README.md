@@ -67,3 +67,42 @@ Bonus features include a simple frontend boostrapped with create-react-app and t
     > Note: The proxied connection will only work locally.
     > You'll need the server to serve the frontend build if
     > you want to host the entire project somewhere.
+
+- Create todo app structure
+ We will need users, tasks, categories, subtasks, comments and tags
+
+ Create table for users
+    id
+    username
+    email
+    password
+    created_at
+    - options to remove or delete a user
+    active: Boolean
+    status: ENUMS ("active","inactive", "deleted")
+ Create table for tasks
+    id
+    title
+    order
+    completed
+    created_at
+    updated_at
+    user_id
+ Create table for categories
+    id
+    name
+    user_id
+ Create table for subtasks
+    id
+    task_id
+    title
+    completed
+ Create table for comments
+    id
+    task_id
+    comment
+    created_at
+ Create table for tags 
+    id
+    task_id
+    tag
